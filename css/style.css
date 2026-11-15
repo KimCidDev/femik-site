@@ -64,12 +64,13 @@ section { position: relative; padding: 110px 0; }
 #loader.hide { opacity: 0; visibility: hidden; }
 .loader-stage { position: relative; width: 240px; height: 240px; }
 .loader-stage canvas, .loader-fallback { position: absolute; inset: 0; width: 100%; height: 100%; }
-.loader-fallback { padding: 50px; animation: pulse 1.4s ease-in-out infinite; transition: opacity 0.4s; }
-.loader-stage.has-3d .loader-fallback { opacity: 0; }
+/* O SVG só aparece se o 3D não iniciar em 1,2 s; quando o 3D inicia, ele some de vez */
+.loader-fallback { padding: 50px; opacity: 0; animation: fallbackIn 0.4s ease 1.2s forwards; }
+.loader-stage.has-3d .loader-fallback { display: none; }
 .loader-bar { width: 160px; height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; }
 .loader-bar i { display: block; height: 100%; width: 0; background: var(--grad); animation: load 1.6s ease forwards; }
 @keyframes load { to { width: 100%; } }
-@keyframes pulse { 50% { transform: scale(0.92); opacity: 0.8; } }
+@keyframes fallbackIn { to { opacity: 1; } }
 
 /* ===== Navegação ===== */
 .nav {
