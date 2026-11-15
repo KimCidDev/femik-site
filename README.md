@@ -5,7 +5,7 @@ presença (sites e portais), automação de processos, análise de dados e mídi
 tudo integrado num único método.
 
 - **Link público (GitHub Pages):** https://kimciddev.github.io/femik-site/
-- **Estado:** protótipo (v0.1) — em validação
+- **Estado:** protótipo (v0.1) — publicado no GitHub Pages, em validação
 
 ## Seções
 1. Loading rápido com o logo em 3D (Three.js; se o WebGL falhar, mostra o logo em SVG)
