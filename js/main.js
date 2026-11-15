@@ -4,9 +4,9 @@
 
 /* ---- CONFIGURAÇÃO: troque aqui o número do WhatsApp ----
    Formato: código do país + DDD + número, só dígitos.
-   O número abaixo é PROVISÓRIO. */
+   */
 const CONFIG = {
-  whatsapp: "5500000000000",
+  whatsapp: "16043386130",
   mensagemPadrao: "Olá, Femik! Vim pelo site e quero saber mais sobre os serviços.",
 };
 
