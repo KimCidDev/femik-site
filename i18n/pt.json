@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "htmlLang": "pt-BR",
+    "ogLocale": "pt_BR",
+    "langName": "Português",
+    "langShort": "PT",
+    "title": "Femik — Presença, automação e dados para empresas em crescimento",
+    "description": "Site que vende, processos que rodam sozinhos e dados que orientam decisões. A Femik é o time digital de empresas em crescimento."
+  },
+  "nav": {
+    "homeAria": "Femik — início",
+    "services": "Serviços",
+    "about": "Quem somos",
+    "testimonials": "Depoimentos",
+    "cta": "Fale conosco",
+    "menuAria": "Abrir menu",
+    "langAria": "Escolher idioma"
+  },
+  "suggest": {
+    "text": "Este site também está disponível em português.",
+    "go": "Ver em português",
+    "close": "Fechar"
+  },
+  "hero": {
+    "eyebrow": "Estúdio digital para empresas em crescimento",
+    "h1": "Presença, automação e dados <span class=\"grad\">trabalhando juntos</span> pelo seu negócio.",
+    "lead": "A Femik coloca sua empresa no lugar certo do mercado digital: um site que vende, processos que rodam sozinhos e números que mostram o próximo passo — tudo integrado, sem você precisar montar um time de TI.",
+    "ctaPrimary": "Quero um diagnóstico gratuito",
+    "ctaSecondary": "Ver serviços",
+    "proof1": "<strong>1</strong> parceiro no lugar de 5 fornecedores",
+    "proof2": "<strong>Entregas</strong> em ciclos curtos e mensuráveis"
+  },
+  "carousel": {
+    "role": "carrossel",
+    "aria": "Serviços da Femik",
+    "prev": "Serviço anterior",
+    "next": "Próximo serviço"
+  },
+  "s1": {
+    "tag": "01 · Sites",
+    "title": "Sites e landing pages que convertem",
+    "text": "Rápidos, bonitos no celular e pensados para transformar visitas em contatos. Seu posicionamento claro desde a primeira tela.",
+    "b1": "Design sob medida",
+    "b2": "SEO e velocidade",
+    "b3": "Integração com WhatsApp"
+  },
+  "s2": {
+    "tag": "02 · Portais",
+    "title": "Portais e sistemas web",
+    "text": "Área do cliente, catálogo, agendamentos, painéis internos: ferramentas web sob medida para a rotina da sua empresa.",
+    "b1": "Acesso por login",
+    "b2": "Painéis administrativos",
+    "b3": "Escala conforme o negócio cresce"
+  },
+  "s3": {
+    "tag": "03 · Automação",
+    "title": "Fluxos de automação",
+    "text": "Formulários que viram propostas, pedidos que avisam a equipe, relatórios que chegam prontos. Menos tarefa repetida, mais tempo para vender.",
+    "b1": "Integração entre ferramentas",
+    "b2": "Atendimento e CRM",
+    "b3": "Alertas e rotinas automáticas"
+  },
+  "s4": {
+    "tag": "04 · Dados",
+    "title": "Análise de dados e dashboards",
+    "text": "Vendas, marketing e operação num só painel. Indicadores claros para decidir com base em números, não em achismo.",
+    "b1": "Dashboards em tempo real",
+    "b2": "Indicadores do seu setor",
+    "b3": "Relatórios mensais"
+  },
+  "s5": {
+    "tag": "05 · Mídias digitais",
+    "title": "Mídias digitais e conteúdo",
+    "text": "Redes sociais, anúncios e conteúdo alinhados ao seu posicionamento — e medidos no mesmo painel dos seus resultados.",
+    "b1": "Estratégia e calendário",
+    "b2": "Anúncios pagos",
+    "b3": "Identidade visual"
+  },
+  "about": {
+    "eyebrow": "Quem somos",
+    "title": "O time digital que sua empresa ainda não tem.",
+    "p1": "A Femik nasceu para resolver um problema comum: empresas em crescimento contratam um fornecedor para o site, outro para as redes, outro para planilhas — e nada conversa entre si.",
+    "p2": "Nós unimos <strong>presença</strong>, <strong>automação</strong> e <strong>dados</strong> num único método. Cada entrega se conecta à anterior, e você acompanha tudo por indicadores simples.",
+    "v1": "Clareza",
+    "v1t": "linguagem simples, sem tecniquês",
+    "v2": "Ritmo",
+    "v2t": "entregas curtas e frequentes",
+    "v3": "Medição",
+    "v3t": "todo projeto com meta e número"
+  },
+  "method": {
+    "aria": "Método Femik em 4 etapas",
+    "n1": "Diagnóstico",
+    "n2": "Presença",
+    "n3": "Automação",
+    "n4": "Dados",
+    "d1": "entendemos o negócio, o público e onde está o gargalo.",
+    "d2": "site, portal e redes com posicionamento claro.",
+    "d3": "conectamos ferramentas e eliminamos tarefas repetidas.",
+    "d4": "medimos, aprendemos e voltamos ao início com mais precisão.",
+    "line1": "MÉTODO",
+    "line2": "FEMIK"
+  },
+  "testi": {
+    "eyebrow": "Depoimentos",
+    "title": "Empresas que deixaram o improviso para trás.",
+    "note": "Versão de protótipo: os depoimentos abaixo são exemplos e serão substituídos por relatos reais de clientes.",
+    "badge": "Exemplo",
+    "q1": "Antes a gente respondia orçamento no improviso. Hoje o formulário do site já gera a proposta e avisa a equipe no WhatsApp.",
+    "c1": "Clínica de estética",
+    "c1s": "Atendimento e automação",
+    "q2": "O painel de vendas mudou nossas reuniões. Em vez de discutir opinião, olhamos o número e decidimos.",
+    "c2": "Distribuidora regional",
+    "c2s": "Análise de dados",
+    "q3": "Site novo, redes alinhadas e, pela primeira vez, sabemos de onde vem cada cliente.",
+    "c3": "Escritório de serviços",
+    "c3s": "Site e mídias digitais"
+  },
+  "contact": {
+    "eyebrow": "Conecte-se conosco",
+    "title": "Vamos posicionar sua empresa <span class=\"grad\">no digital de hoje</span>.",
+    "text": "Conte em poucas linhas o que você precisa. Respondemos pelo WhatsApp com um diagnóstico inicial gratuito.",
+    "openChat": "Abrir conversa",
+    "emailLabel": "E-mail"
+  },
+  "form": {
+    "name": "Seu nome",
+    "namePh": "Como podemos te chamar?",
+    "company": "Empresa",
+    "companyPh": "Nome da empresa",
+    "need": "O que você precisa?",
+    "o1": "Site ou landing page",
+    "o2": "Portal ou sistema web",
+    "o3": "Automação de processos",
+    "o4": "Análise de dados / dashboards",
+    "o5": "Mídias digitais",
+    "o6": "Ainda não sei — quero um diagnóstico",
+    "message": "Mensagem",
+    "messagePh": "Conte um pouco sobre o seu negócio",
+    "submit": "Enviar pelo WhatsApp"
+  },
+  "footer": {
+    "tagline": "Presença, automação e dados para empresas em crescimento.",
+    "rights": "Todos os direitos reservados."
+  },
+  "whats": {
+    "aria": "Falar com a Femik no WhatsApp",
+    "label": "Fale conosco"
+  },
+  "js": {
+    "defaultMsg": "Olá, Femik! Vim pelo site e quero saber mais sobre os serviços.",
+    "greeting": "Olá, Femik! Meu nome é {name}",
+    "fromCompany": ", da empresa {company}",
+    "interest": ".\nTenho interesse em: {service}."
+  }
+}

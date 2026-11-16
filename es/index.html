@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Femik — Presencia, automatización y datos para empresas en crecimiento</title>
+  <meta name="description" content="Un sitio web que vende, procesos que funcionan solos y datos que orientan decisiones. Femik es el equipo digital de las empresas en crecimiento." />
+  <meta name="theme-color" content="#07060f" />
+  <meta property="og:title" content="Femik — Presencia, automatización y datos para empresas en crecimiento" />
+  <meta property="og:description" content="Un sitio web que vende, procesos que funcionan solos y datos que orientan decisiones. Femik es el equipo digital de las empresas en crecimiento." />
+  <meta property="og:locale" content="es_LA" />
+  <meta property="og:locale:alternate" content="pt_BR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kimciddev.github.io/femik-site/es/" />
+  <link rel="canonical" href="https://kimciddev.github.io/femik-site/es/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://kimciddev.github.io/femik-site/" />
+  <link rel="alternate" hreflang="en" href="https://kimciddev.github.io/femik-site/en/" />
+  <link rel="alternate" hreflang="es" href="https://kimciddev.github.io/femik-site/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://kimciddev.github.io/femik-site/en/" />
+  <meta property="og:image" content="https://kimciddev.github.io/femik-site/assets/logo/femik-og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <link rel="icon" type="image/svg+xml" href="../assets/logo/femik-simbolo.svg" />
+  <link rel="apple-touch-icon" href="../marca/png/femik-favicon-512.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+  </script>
+</head>
+<body class="is-loading">
+
+  <!-- Gerado por tools/build.py a partir de src/index.template.html — edite o modelo e os textos em i18n/, não este arquivo. -->
+  <!-- ============ LOADING com logo 3D ============ -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-stage">
+      <img class="loader-fallback" src="../assets/logo/femik-simbolo.svg" alt="" />
+      <canvas id="logo3d"></canvas>
+    </div>
+    <div class="loader-bar"><i></i></div>
+  </div>
+
+  <!-- ============ CABEÇALHO ============ -->
+  <header class="nav" id="topo">
+    <a href="#home" class="brand" aria-label="Femik — inicio">
+      <img src="../assets/logo/femik-logo-horizontal.svg" alt="Femik" height="34" />
+    </a>
+    <nav class="nav-links" id="menu">
+      <a href="#services">Servicios</a>
+      <a href="#about">Quiénes somos</a>
+      <a href="#testimonials">Testimonios</a>
+      <a href="#contact" class="btn btn-sm">Contáctanos</a>
+    </nav>
+    <div class="lang">
+      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Elegir idioma">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z"/></svg><span>ES</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <ul class="lang-menu">
+        <li><a href="../" hreflang="pt-BR" lang="pt-BR" data-lang="pt"><b>PT</b> Português</a></li>
+        <li><a href="../en/" hreflang="en" lang="en" data-lang="en"><b>EN</b> English</a></li>
+        <li><a href="../es/" hreflang="es" lang="es" data-lang="es" aria-current="true"><b>ES</b> Español</a></li>
+      </ul>
+    </div>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- ============ HERO + CARROSSEL DE SERVIÇOS ============ -->
+    <section class="hero" id="home">
+      <div class="glow g1"></div><div class="glow g2"></div><div class="grid-bg"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Estudio digital para empresas en crecimiento</p>
+          <h1>Presencia, automatización y datos <span class="grad">trabajando juntos</span> por tu negocio.</h1>
+          <p class="lead">Femik pone a tu empresa en el lugar correcto del mercado digital: un sitio web que vende, procesos que funcionan solos y números que muestran el siguiente paso — todo integrado, sin que tengas que armar un equipo de TI.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn">Quiero un diagnóstico gratuito</a>
+            <a href="#services" class="btn btn-ghost">Ver servicios</a>
+          </div>
+          <ul class="hero-proof">
+            <li><strong>1</strong> socio en lugar de 5 proveedores</li>
+            <li><strong>Entregas</strong> en ciclos cortos y medibles</li>
+          </ul>
+        </div>
+
+        <div class="carousel reveal" id="services" aria-roledescription="carrusel" aria-label="Servicios de Femik">
+          <div class="slides">
+            <article class="slide is-active" data-accent="violet">
+              <div class="slide-icon">
+                <svg viewBox="0 0 64 64"><rect x="6" y="10" width="52" height="38" rx="6"/><path d="M6 20h52"/><circle cx="13" cy="15" r="1.6"/><circle cx="19" cy="15" r="1.6"/><path d="M16 30h18M16 38h28"/><path d="M24 56h16M32 48v8"/></svg>
+              </div>
+              <p class="slide-tag">01 · Sitios web</p>
+              <h2>Sitios web y landing pages que convierten</h2>
+              <p>Rápidos, atractivos en el celular y pensados para convertir visitas en contactos. Tu posicionamiento claro desde la primera pantalla.</p>
+              <ul><li>Diseño a medida</li><li>SEO y velocidad</li><li>Integración con WhatsApp</li></ul>
+            </article>
+            <article class="slide" data-accent="indigo">
+              <div class="slide-icon">
+                <svg viewBox="0 0 64 64"><rect x="6" y="8" width="22" height="22" rx="4"/><rect x="36" y="8" width="22" height="22" rx="4"/><rect x="6" y="36" width="22" height="22" rx="4"/><rect x="36" y="36" width="22" height="22" rx="4"/><path d="M28 19h8M17 30v6M47 30v6M28 47h8"/></svg>
+              </div>
+              <p class="slide-tag">02 · Portales</p>
+              <h2>Portales y sistemas web</h2>
+              <p>Área de clientes, catálogo, agendamiento, paneles internos: herramientas web a medida para la rutina de tu empresa.</p>
+              <ul><li>Acceso con usuario y contraseña</li><li>Paneles administrativos</li><li>Escala a medida que tu negocio crece</li></ul>
+            </article>
+            <article class="slide" data-accent="blue">
+              <div class="slide-icon">
+                <svg viewBox="0 0 64 64"><circle cx="12" cy="32" r="6"/><circle cx="52" cy="14" r="6"/><circle cx="52" cy="50" r="6"/><path d="M18 32h10l8-18h10M28 32l8 18h10"/><path d="M40 10l4 4-4 4"/></svg>
+              </div>
+              <p class="slide-tag">03 · Automatización</p>
+              <h2>Flujos de automatización</h2>
+              <p>Formularios que se convierten en propuestas, pedidos que avisan al equipo, reportes que llegan listos. Menos tareas repetitivas, más tiempo para vender.</p>
+              <ul><li>Integración entre herramientas</li><li>Atención al cliente y CRM</li><li>Alertas y rutinas automáticas</li></ul>
+            </article>
+            <article class="slide" data-accent="cyan">
+              <div class="slide-icon">
+                <svg viewBox="0 0 64 64"><path d="M8 56h48"/><rect x="12" y="34" width="8" height="18" rx="2"/><rect x="28" y="24" width="8" height="28" rx="2"/><rect x="44" y="12" width="8" height="40" rx="2"/><path d="M10 26l14-10 12 6 18-14"/></svg>
+              </div>
+              <p class="slide-tag">04 · Datos</p>
+              <h2>Análisis de datos y dashboards</h2>
+              <p>Ventas, marketing y operación en un solo panel. Indicadores claros para decidir con números, no con suposiciones.</p>
+              <ul><li>Dashboards en tiempo real</li><li>Indicadores de tu sector</li><li>Reportes mensuales</li></ul>
+            </article>
+            <article class="slide" data-accent="pink">
+              <div class="slide-icon">
+                <svg viewBox="0 0 64 64"><rect x="8" y="8" width="48" height="48" rx="12"/><circle cx="32" cy="32" r="11"/><circle cx="46" cy="18" r="2.4"/></svg>
+              </div>
+              <p class="slide-tag">05 · Medios digitales</p>
+              <h2>Medios digitales y contenido</h2>
+              <p>Redes sociales, anuncios y contenido alineados con tu posicionamiento — y medidos en el mismo panel que tus resultados.</p>
+              <ul><li>Estrategia y calendario</li><li>Anuncios pagados</li><li>Identidad visual</li></ul>
+            </article>
+          </div>
+          <div class="carousel-ui">
+            <button class="arrow prev" aria-label="Servicio anterior">‹</button>
+            <div class="dots" role="tablist"></div>
+            <button class="arrow next" aria-label="Siguiente servicio">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUEM SOMOS (infográfico) ============ -->
+    <section class="about" id="about">
+      <div class="wrap about-inner">
+        <div class="about-copy reveal">
+          <p class="eyebrow">Quiénes somos</p>
+          <h2>El equipo digital que tu empresa todavía no tiene.</h2>
+          <p>Femik nació para resolver un problema común: las empresas en crecimiento contratan un proveedor para el sitio web, otro para las redes, otro para las hojas de cálculo — y nada se conecta entre sí.</p>
+          <p>Unimos <strong>presencia</strong>, <strong>automatización</strong> y <strong>datos</strong> en un único método. Cada entrega se conecta con la anterior, y sigues todo con indicadores simples.</p>
+          <div class="values">
+            <div><span>Claridad</span><small>lenguaje simple, sin tecnicismos</small></div>
+            <div><span>Ritmo</span><small>entregas cortas y frecuentes</small></div>
+            <div><span>Medición</span><small>cada proyecto con meta y número</small></div>
+          </div>
+        </div>
+
+        <figure class="infographic reveal" aria-label="Método Femik en 4 etapas">
+          <svg viewBox="0 0 520 520" class="info-svg">
+            <defs>
+              <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#A855F7"/><stop offset=".5" stop-color="#2563EB"/><stop offset="1" stop-color="#22D3EE"/>
+              </linearGradient>
+              <radialGradient id="core" cx=".5" cy=".5" r=".5">
+                <stop offset="0" stop-color="#1b1640"/><stop offset="1" stop-color="#0d0b1e"/>
+              </radialGradient>
+            </defs>
+            <circle cx="260" cy="260" r="170" fill="none" stroke="#ffffff14" stroke-width="40"/>
+            <circle class="ring-anim" cx="260" cy="260" r="170" fill="none" stroke="url(#ring)" stroke-width="4" stroke-dasharray="14 10"/>
+            <circle cx="260" cy="260" r="92" fill="url(#core)" stroke="url(#ring)" stroke-width="2"/>
+            <image href="../assets/logo/femik-simbolo.svg" x="225" y="198" width="70" height="70"/>
+            <text x="260" y="295" text-anchor="middle" class="t-core">MÉTODO</text>
+            <text x="260" y="314" text-anchor="middle" class="t-core b">FEMIK</text>
+
+            <g class="node" transform="translate(260 90)">
+              <circle r="44" fill="#120f2b" stroke="#A855F7" stroke-width="2"/>
+              <text y="-4" text-anchor="middle" class="t-num">01</text>
+              <text y="16" text-anchor="middle" class="t-lbl">Diagnóstico</text>
+            </g>
+            <g class="node" transform="translate(430 260)">
+              <circle r="44" fill="#120f2b" stroke="#6366F1" stroke-width="2"/>
+              <text y="-4" text-anchor="middle" class="t-num">02</text>
+              <text y="16" text-anchor="middle" class="t-lbl">Presencia</text>
+            </g>
+            <g class="node" transform="translate(260 430)">
+              <circle r="44" fill="#120f2b" stroke="#2563EB" stroke-width="2"/>
+              <text y="-4" text-anchor="middle" class="t-num">03</text>
+              <text y="16" text-anchor="middle" class="t-lbl">Automatización</text>
+            </g>
+            <g class="node" transform="translate(90 260)">
+              <circle r="44" fill="#120f2b" stroke="#22D3EE" stroke-width="2"/>
+              <text y="-4" text-anchor="middle" class="t-num">04</text>
+              <text y="16" text-anchor="middle" class="t-lbl">Datos</text>
+            </g>
+            <circle class="orbit-dot" r="7" fill="#22D3EE"/>
+          </svg>
+          <figcaption>
+            <ol class="steps">
+              <li><b>Diagnóstico</b> — entendemos el negocio, el público y dónde está el cuello de botella.</li>
+              <li><b>Presencia</b> — sitio web, portal y redes con un posicionamiento claro.</li>
+              <li><b>Automatización</b> — conectamos herramientas y eliminamos tareas repetitivas.</li>
+              <li><b>Datos</b> — medimos, aprendemos y volvemos al inicio con más precisión.</li>
+            </ol>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS ============ -->
+    <section class="testimonials" id="testimonials">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Testimonios</p>
+          <h2>Empresas que dejaron atrás la improvisación.</h2>
+          <p class="note">Versión prototipo: los testimonios a continuación son ejemplos y serán reemplazados por relatos reales de clientes.</p>
+        </div>
+        <div class="t-grid">
+          <blockquote class="t-card reveal">
+            <span class="t-badge">Ejemplo</span>
+            <p>“Antes respondíamos los presupuestos improvisando. Hoy el formulario del sitio genera la propuesta y avisa al equipo por WhatsApp.”</p>
+            <footer><span class="avatar a1">CL</span><div><b>Clínica estética</b><small>Atención y automatización</small></div></footer>
+          </blockquote>
+          <blockquote class="t-card reveal">
+            <span class="t-badge">Ejemplo</span>
+            <p>“El panel de ventas cambió nuestras reuniones. En lugar de discutir opiniones, miramos el número y decidimos.”</p>
+            <footer><span class="avatar a2">DI</span><div><b>Distribuidora regional</b><small>Análisis de datos</small></div></footer>
+          </blockquote>
+          <blockquote class="t-card reveal">
+            <span class="t-badge">Ejemplo</span>
+            <p>“Sitio nuevo, redes alineadas y, por primera vez, sabemos de dónde viene cada cliente.”</p>
+            <footer><span class="avatar a3">ES</span><div><b>Despacho de servicios</b><small>Sitio web y medios digitales</small></div></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONECTE-SE CONOSCO ============ -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Conéctate con nosotros</p>
+          <h2>Posicionemos tu empresa <span class="grad">en el mundo digital de hoy</span>.</h2>
+          <p>Cuéntanos en pocas líneas lo que necesitas. Te respondemos por WhatsApp con un diagnóstico inicial gratuito.</p>
+          <ul class="contact-list">
+            <li><span>WhatsApp</span><a href="#" class="js-whats">Abrir conversación</a></li>
+            <li><span>Correo</span><a href="mailto:contato@femik.com.br" class="js-email">contato@femik.com.br</a></li>
+          </ul>
+        </div>
+        <form class="contact-form reveal" id="contact-form">
+          <label>Tu nombre<input name="name" required autocomplete="name" placeholder="¿Cómo te llamamos?" /></label>
+          <label>Empresa<input name="company" autocomplete="organization" placeholder="Nombre de la empresa" /></label>
+          <label>¿Qué necesitas?
+            <select name="service">
+              <option>Sitio web o landing page</option>
+              <option>Portal o sistema web</option>
+              <option>Automatización de procesos</option>
+              <option>Análisis de datos / dashboards</option>
+              <option>Medios digitales</option>
+              <option>Aún no lo sé — quiero un diagnóstico</option>
+            </select>
+          </label>
+          <label>Mensaje<textarea name="message" rows="3" placeholder="Cuéntanos un poco sobre tu negocio"></textarea></label>
+          <button type="submit" class="btn btn-block">Enviar por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <img src="../assets/logo/femik-logo-horizontal.svg" alt="Femik" height="34" />
+      <p>Presencia, automatización y datos para empresas en crecimiento.</p>
+      <p class="copy">© <span id="ano"></span> Femik. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLUTUANTE ============ -->
+  <a href="#" class="whats-float js-whats" target="_blank" rel="noopener" aria-label="Hablar con Femik por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C8.86 3 3.04 8.82 3.04 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A12.94 12.94 0 0 0 16.04 29C23.22 29 29 23.18 29 16S23.22 3 16.04 3Zm0 23.6c-2 0-3.95-.54-5.65-1.56l-.4-.24-3.96 1.04 1.06-3.86-.26-.4A10.56 10.56 0 0 1 5.4 16c0-5.86 4.77-10.62 10.64-10.62 5.86 0 10.6 4.76 10.6 10.62 0 5.87-4.74 10.6-10.6 10.6Zm5.82-7.94c-.32-.16-1.88-.93-2.17-1.03-.3-.11-.5-.16-.72.16-.21.32-.82 1.03-1 1.24-.19.21-.37.24-.69.08-.32-.16-1.34-.5-2.56-1.58-.94-.84-1.58-1.88-1.77-2.2-.18-.32-.02-.49.14-.65.15-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.11 1.08-1.11 2.64s1.14 3.07 1.3 3.28c.16.21 2.24 3.42 5.43 4.8.76.33 1.35.52 1.81.67.76.24 1.45.2 2 .12.61-.09 1.88-.77 2.15-1.51.26-.74.26-1.38.18-1.51-.08-.13-.29-.21-.61-.37Z"/></svg>
+    <span class="whats-label">Contáctanos</span>
+  </a>
+
+  <script>window.FEMIK_I18N = {"lang": "es", "msg": {"defaultMsg": "¡Hola, Femik! Llegué por el sitio web y quiero saber más sobre sus servicios.", "greeting": "¡Hola, Femik! Me llamo {name}", "fromCompany": ", de la empresa {company}", "interest": ".\nMe interesa: {service}."}, "langs": {"pt": {"href": "../", "html": "pt-BR", "text": "Este site também está disponível em português.", "go": "Ver em português", "close": "Fechar"}, "en": {"href": "../en/", "html": "en", "text": "This site is also available in English.", "go": "View in English", "close": "Close"}, "es": {"href": "../es/", "html": "es", "text": "Este sitio también está disponible en español.", "go": "Ver en español", "close": "Cerrar"}}};</script>
+  <script src="../js/main.js"></script>
+  <script type="module" src="../js/logo3d.js"></script>
+</body>
+</html>

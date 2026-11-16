@@ -8,8 +8,16 @@
   <meta name="theme-color" content="#07060f" />
   <meta property="og:title" content="Femik — Presença, automação e dados para empresas em crescimento" />
   <meta property="og:description" content="Site que vende, processos que rodam sozinhos e dados que orientam decisões. A Femik é o time digital de empresas em crescimento." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="es_LA" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kimciddev.github.io/femik-site/" />
+  <link rel="canonical" href="https://kimciddev.github.io/femik-site/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://kimciddev.github.io/femik-site/" />
+  <link rel="alternate" hreflang="en" href="https://kimciddev.github.io/femik-site/en/" />
+  <link rel="alternate" hreflang="es" href="https://kimciddev.github.io/femik-site/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://kimciddev.github.io/femik-site/en/" />
   <meta property="og:image" content="https://kimciddev.github.io/femik-site/assets/logo/femik-og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -25,6 +33,7 @@
 </head>
 <body class="is-loading">
 
+  <!-- Gerado por tools/build.py a partir de src/index.template.html — edite o modelo e os textos em i18n/, não este arquivo. -->
   <!-- ============ LOADING com logo 3D ============ -->
   <div id="loader" aria-hidden="true">
     <div class="loader-stage">
@@ -36,21 +45,31 @@
 
   <!-- ============ CABEÇALHO ============ -->
   <header class="nav" id="topo">
-    <a href="#inicio" class="brand" aria-label="Femik — início">
+    <a href="#home" class="brand" aria-label="Femik — início">
       <img src="assets/logo/femik-logo-horizontal.svg" alt="Femik" height="34" />
     </a>
     <nav class="nav-links" id="menu">
-      <a href="#servicos">Serviços</a>
-      <a href="#quem-somos">Quem somos</a>
-      <a href="#depoimentos">Depoimentos</a>
-      <a href="#contato" class="btn btn-sm">Fale conosco</a>
+      <a href="#services">Serviços</a>
+      <a href="#about">Quem somos</a>
+      <a href="#testimonials">Depoimentos</a>
+      <a href="#contact" class="btn btn-sm">Fale conosco</a>
     </nav>
+    <div class="lang">
+      <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Escolher idioma">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z"/></svg><span>PT</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <ul class="lang-menu">
+        <li><a href="./" hreflang="pt-BR" lang="pt-BR" data-lang="pt" aria-current="true"><b>PT</b> Português</a></li>
+        <li><a href="en/" hreflang="en" lang="en" data-lang="en"><b>EN</b> English</a></li>
+        <li><a href="es/" hreflang="es" lang="es" data-lang="es"><b>ES</b> Español</a></li>
+      </ul>
+    </div>
     <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   </header>
 
   <main>
     <!-- ============ HERO + CARROSSEL DE SERVIÇOS ============ -->
-    <section class="hero" id="inicio">
+    <section class="hero" id="home">
       <div class="glow g1"></div><div class="glow g2"></div><div class="grid-bg"></div>
       <div class="wrap hero-inner">
         <div class="hero-copy reveal">
@@ -58,8 +77,8 @@
           <h1>Presença, automação e dados <span class="grad">trabalhando juntos</span> pelo seu negócio.</h1>
           <p class="lead">A Femik coloca sua empresa no lugar certo do mercado digital: um site que vende, processos que rodam sozinhos e números que mostram o próximo passo — tudo integrado, sem você precisar montar um time de TI.</p>
           <div class="hero-cta">
-            <a href="#contato" class="btn">Quero um diagnóstico gratuito</a>
-            <a href="#servicos" class="btn btn-ghost">Ver serviços</a>
+            <a href="#contact" class="btn">Quero um diagnóstico gratuito</a>
+            <a href="#services" class="btn btn-ghost">Ver serviços</a>
           </div>
           <ul class="hero-proof">
             <li><strong>1</strong> parceiro no lugar de 5 fornecedores</li>
@@ -67,7 +86,7 @@
           </ul>
         </div>
 
-        <div class="carousel reveal" id="servicos" aria-roledescription="carrossel" aria-label="Serviços da Femik">
+        <div class="carousel reveal" id="services" aria-roledescription="carrossel" aria-label="Serviços da Femik">
           <div class="slides">
             <article class="slide is-active" data-accent="violet">
               <div class="slide-icon">
@@ -125,7 +144,7 @@
     </section>
 
     <!-- ============ QUEM SOMOS (infográfico) ============ -->
-    <section class="about" id="quem-somos">
+    <section class="about" id="about">
       <div class="wrap about-inner">
         <div class="about-copy reveal">
           <p class="eyebrow">Quem somos</p>
@@ -191,7 +210,7 @@
     </section>
 
     <!-- ============ DEPOIMENTOS ============ -->
-    <section class="testimonials" id="depoimentos">
+    <section class="testimonials" id="testimonials">
       <div class="wrap">
         <div class="section-head reveal">
           <p class="eyebrow">Depoimentos</p>
@@ -219,7 +238,7 @@
     </section>
 
     <!-- ============ CONECTE-SE CONOSCO ============ -->
-    <section class="contact" id="contato">
+    <section class="contact" id="contact">
       <div class="wrap contact-inner">
         <div class="contact-copy reveal">
           <p class="eyebrow">Conecte-se conosco</p>
@@ -230,11 +249,11 @@
             <li><span>E-mail</span><a href="mailto:contato@femik.com.br" class="js-email">contato@femik.com.br</a></li>
           </ul>
         </div>
-        <form class="contact-form reveal" id="form-contato">
-          <label>Seu nome<input name="nome" required autocomplete="name" placeholder="Como podemos te chamar?" /></label>
-          <label>Empresa<input name="empresa" autocomplete="organization" placeholder="Nome da empresa" /></label>
+        <form class="contact-form reveal" id="contact-form">
+          <label>Seu nome<input name="name" required autocomplete="name" placeholder="Como podemos te chamar?" /></label>
+          <label>Empresa<input name="company" autocomplete="organization" placeholder="Nome da empresa" /></label>
           <label>O que você precisa?
-            <select name="servico">
+            <select name="service">
               <option>Site ou landing page</option>
               <option>Portal ou sistema web</option>
               <option>Automação de processos</option>
@@ -243,7 +262,7 @@
               <option>Ainda não sei — quero um diagnóstico</option>
             </select>
           </label>
-          <label>Mensagem<textarea name="mensagem" rows="3" placeholder="Conte um pouco sobre o seu negócio"></textarea></label>
+          <label>Mensagem<textarea name="message" rows="3" placeholder="Conte um pouco sobre o seu negócio"></textarea></label>
           <button type="submit" class="btn btn-block">Enviar pelo WhatsApp</button>
         </form>
       </div>
@@ -264,6 +283,7 @@
     <span class="whats-label">Fale conosco</span>
   </a>
 
+  <script>window.FEMIK_I18N = {"lang": "pt", "msg": {"defaultMsg": "Olá, Femik! Vim pelo site e quero saber mais sobre os serviços.", "greeting": "Olá, Femik! Meu nome é {name}", "fromCompany": ", da empresa {company}", "interest": ".\nTenho interesse em: {service}."}, "langs": {"pt": {"href": "./", "html": "pt-BR", "text": "Este site também está disponível em português.", "go": "Ver em português", "close": "Fechar"}, "en": {"href": "en/", "html": "en", "text": "This site is also available in English.", "go": "View in English", "close": "Close"}, "es": {"href": "es/", "html": "es", "text": "Este sitio también está disponible en español.", "go": "Ver en español", "close": "Cerrar"}}};</script>
   <script src="js/main.js"></script>
   <script type="module" src="js/logo3d.js"></script>
 </body>

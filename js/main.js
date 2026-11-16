@@ -7,8 +7,11 @@
    */
 const CONFIG = {
   whatsapp: "16043386130",
-  mensagemPadrao: "Olá, Femik! Vim pelo site e quero saber mais sobre os serviços.",
 };
+
+/* Textos do idioma da página — injetados por tools/build.py (ver i18n/*.json) */
+const I18N = window.FEMIK_I18N || { lang: "pt", msg: {}, langs: {} };
+const fmt = (str, vars) => str.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? "");
 
 const whatsLink = (texto) =>
   `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texto)}`;
@@ -34,20 +37,21 @@ const whatsLink = (texto) =>
 
 /* ---- Links do WhatsApp ---- */
 document.querySelectorAll(".js-whats").forEach((a) => {
-  a.href = whatsLink(CONFIG.mensagemPadrao);
+  a.href = whatsLink(I18N.msg.defaultMsg);
   a.target = "_blank";
   a.rel = "noopener";
 });
 
-/* ---- Formulário → mensagem pronta no WhatsApp ---- */
-document.getElementById("form-contato").addEventListener("submit", (e) => {
+/* ---- Formulário → mensagem pronta no WhatsApp (no idioma da página) ---- */
+document.getElementById("contact-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const f = new FormData(e.target);
+  const m = I18N.msg;
   const texto =
-    `Olá, Femik! Meu nome é ${f.get("nome")}` +
-    (f.get("empresa") ? `, da empresa ${f.get("empresa")}` : "") +
-    `.\nTenho interesse em: ${f.get("servico")}.` +
-    (f.get("mensagem") ? `\n\n${f.get("mensagem")}` : "");
+    fmt(m.greeting, { name: f.get("name") }) +
+    (f.get("company") ? fmt(m.fromCompany, { company: f.get("company") }) : "") +
+    fmt(m.interest, { service: f.get("service") }) +
+    (f.get("message") ? `\n\n${f.get("message")}` : "");
   window.open(whatsLink(texto), "_blank", "noopener");
 });
 
@@ -144,6 +148,17 @@ menu.querySelectorAll("a").forEach((a) =>
   requestAnimationFrame(tick);
 })();
 
+/* ---- Infográfico: reduz rótulos longos para caber no círculo (qualquer idioma) ---- */
+const fitLabels = () =>
+  document.querySelectorAll(".info-svg .t-lbl").forEach((t) => {
+    const max = 72; // largura útil do círculo na altura do rótulo
+    t.style.fontSize = "";
+    const w = t.getBBox().width;
+    if (w > max) t.style.fontSize = `${(11.5 * max) / w}px`;
+  });
+fitLabels();
+if (document.fonts) document.fonts.ready.then(fitLabels); // mede de novo com a fonte final
+
 /* ---- Revelar seções ao rolar ---- */
 (() => {
   const io = new IntersectionObserver(
@@ -159,3 +174,57 @@ menu.querySelectorAll("a").forEach((a) =>
 })();
 
 document.getElementById("ano").textContent = new Date().getFullYear();
+
+/* ---- Menu de idiomas ---- */
+(() => {
+  const box = document.querySelector(".lang");
+  if (!box) return;
+  const btn = box.querySelector(".lang-btn");
+  const setOpen = (open) => {
+    box.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", open);
+  };
+  btn.addEventListener("click", (e) => { e.stopPropagation(); setOpen(!box.classList.contains("open")); });
+  document.addEventListener("click", (e) => { if (!box.contains(e.target)) setOpen(false); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
+
+  // ao trocar de idioma: lembra a escolha e mantém a seção em que a pessoa está
+  box.querySelectorAll("a[data-lang]").forEach((a) =>
+    a.addEventListener("click", () => {
+      try { localStorage.setItem("femik-lang", a.dataset.lang); } catch (_) {}
+      a.href = a.getAttribute("href").split("#")[0] + location.hash;
+    })
+  );
+})();
+
+/* ---- Sugestão de idioma: se o navegador fala outro idioma que temos ---- */
+(() => {
+  let chosen = null;
+  try { chosen = localStorage.getItem("femik-lang"); } catch (_) {}
+  if (chosen) return; // a pessoa já escolheu um idioma
+  const prefs = (navigator.languages || [navigator.language || ""]).map((l) => l.slice(0, 2).toLowerCase());
+  const match = prefs.find((l) => I18N.langs[l]);
+  if (!match || match === I18N.lang) return;
+  const L = I18N.langs[match];
+  const bar = document.createElement("div");
+  bar.className = "lang-suggest";
+  bar.lang = L.html;
+  bar.innerHTML = `<span></span><a></a><button type="button">×</button>`;
+  bar.querySelector("span").textContent = L.text;
+  const go = bar.querySelector("a");
+  go.textContent = L.go;
+  go.href = L.href;
+  go.addEventListener("click", () => {
+    try { localStorage.setItem("femik-lang", match); } catch (_) {}
+    go.href = L.href + location.hash;
+  });
+  const close = bar.querySelector("button");
+  close.setAttribute("aria-label", L.close);
+  close.addEventListener("click", () => {
+    try { localStorage.setItem("femik-lang", I18N.lang); } catch (_) {}
+    bar.remove();
+  });
+  const show = () => document.body.appendChild(bar);
+  if (document.body.classList.contains("is-loading")) window.addEventListener("femik:loaded", show, { once: true });
+  else show();
+})();

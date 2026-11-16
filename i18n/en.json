@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "htmlLang": "en",
+    "ogLocale": "en_US",
+    "langName": "English",
+    "langShort": "EN",
+    "title": "Femik — Web presence, automation and data for growing businesses",
+    "description": "A website that sells, processes that run on their own and data that guides decisions. Femik is the digital team for growing businesses."
+  },
+  "nav": {
+    "homeAria": "Femik — home",
+    "services": "Services",
+    "about": "About us",
+    "testimonials": "Testimonials",
+    "cta": "Get in touch",
+    "menuAria": "Open menu",
+    "langAria": "Choose language"
+  },
+  "suggest": {
+    "text": "This site is also available in English.",
+    "go": "View in English",
+    "close": "Close"
+  },
+  "hero": {
+    "eyebrow": "Digital studio for growing businesses",
+    "h1": "Web presence, automation and data <span class=\"grad\">working together</span> for your business.",
+    "lead": "Femik puts your business in the right place online: a website that sells, processes that run on their own and numbers that show you the next step — all connected, without having to build an in-house tech team.",
+    "ctaPrimary": "Get a free assessment",
+    "ctaSecondary": "See our services",
+    "proof1": "<strong>1</strong> partner instead of 5 vendors",
+    "proof2": "<strong>Delivery</strong> in short, measurable cycles"
+  },
+  "carousel": {
+    "role": "carousel",
+    "aria": "Femik services",
+    "prev": "Previous service",
+    "next": "Next service"
+  },
+  "s1": {
+    "tag": "01 · Websites",
+    "title": "Websites and landing pages that convert",
+    "text": "Fast, great on mobile and built to turn visits into leads. Your positioning is clear from the very first screen.",
+    "b1": "Custom design",
+    "b2": "SEO and speed",
+    "b3": "WhatsApp integration"
+  },
+  "s2": {
+    "tag": "02 · Web apps",
+    "title": "Client portals and web apps",
+    "text": "Client areas, catalogs, booking, internal dashboards: custom web tools built around how your business actually runs.",
+    "b1": "Secure login access",
+    "b2": "Admin panels",
+    "b3": "Scales as your business grows"
+  },
+  "s3": {
+    "tag": "03 · Automation",
+    "title": "Workflow automation",
+    "text": "Forms that become proposals, orders that alert your team, reports that arrive ready to read. Less repetitive work, more time to sell.",
+    "b1": "Tool-to-tool integrations",
+    "b2": "Customer service and CRM",
+    "b3": "Automatic alerts and routines"
+  },
+  "s4": {
+    "tag": "04 · Data",
+    "title": "Data analysis and dashboards",
+    "text": "Sales, marketing and operations in one dashboard. Clear metrics so you decide based on numbers, not guesswork.",
+    "b1": "Real-time dashboards",
+    "b2": "Metrics for your industry",
+    "b3": "Monthly reports"
+  },
+  "s5": {
+    "tag": "05 · Digital media",
+    "title": "Digital media and content",
+    "text": "Social media, ads and content aligned with your positioning — and measured in the same dashboard as your results.",
+    "b1": "Strategy and content calendar",
+    "b2": "Paid ads",
+    "b3": "Visual identity"
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "The digital team your business doesn't have yet.",
+    "p1": "Femik was born to solve a common problem: growing businesses hire one vendor for the website, another for social media, another for spreadsheets — and none of it talks to each other.",
+    "p2": "We bring <strong>presence</strong>, <strong>automation</strong> and <strong>data</strong> together in a single method. Each delivery builds on the last, and you follow everything through simple metrics.",
+    "v1": "Clarity",
+    "v1t": "plain language, no tech jargon",
+    "v2": "Pace",
+    "v2t": "short, frequent deliveries",
+    "v3": "Measurement",
+    "v3t": "every project has a goal and a number"
+  },
+  "method": {
+    "aria": "The Femik Method in 4 steps",
+    "n1": "Assessment",
+    "n2": "Presence",
+    "n3": "Automation",
+    "n4": "Data",
+    "d1": "we learn your business, your audience and where the bottleneck is.",
+    "d2": "website, portal and social media with clear positioning.",
+    "d3": "we connect your tools and eliminate repetitive tasks.",
+    "d4": "we measure, learn and start the cycle again with more precision.",
+    "line1": "THE FEMIK",
+    "line2": "METHOD"
+  },
+  "testi": {
+    "eyebrow": "Testimonials",
+    "title": "Businesses that left improvisation behind.",
+    "note": "Prototype version: the testimonials below are examples and will be replaced with real client feedback.",
+    "badge": "Example",
+    "q1": "We used to put quotes together on the fly. Now the website form generates the proposal and alerts the team on WhatsApp.",
+    "c1": "Aesthetics clinic",
+    "c1s": "Customer service and automation",
+    "q2": "The sales dashboard changed our meetings. Instead of debating opinions, we look at the numbers and decide.",
+    "c2": "Regional distributor",
+    "c2s": "Data analysis",
+    "q3": "New website, aligned social media and, for the first time, we know where every client comes from.",
+    "c3": "Professional services firm",
+    "c3s": "Website and digital media"
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Let's position your business <span class=\"grad\">for today's digital world</span>.",
+    "text": "Tell us in a few lines what you need. We'll reply on WhatsApp with a free initial assessment.",
+    "openChat": "Start a chat",
+    "emailLabel": "Email"
+  },
+  "form": {
+    "name": "Your name",
+    "namePh": "What should we call you?",
+    "company": "Company",
+    "companyPh": "Company name",
+    "need": "What do you need?",
+    "o1": "Website or landing page",
+    "o2": "Client portal or web app",
+    "o3": "Process automation",
+    "o4": "Data analysis / dashboards",
+    "o5": "Digital media",
+    "o6": "Not sure yet — I'd like an assessment",
+    "message": "Message",
+    "messagePh": "Tell us a little about your business",
+    "submit": "Send via WhatsApp"
+  },
+  "footer": {
+    "tagline": "Web presence, automation and data for growing businesses.",
+    "rights": "All rights reserved."
+  },
+  "whats": {
+    "aria": "Chat with Femik on WhatsApp",
+    "label": "Get in touch"
+  },
+  "js": {
+    "defaultMsg": "Hi Femik! I found you through your website and would like to know more about your services.",
+    "greeting": "Hi Femik! My name is {name}",
+    "fromCompany": ", from {company}",
+    "interest": ".\nI'm interested in: {service}."
+  }
+}
