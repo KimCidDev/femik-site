@@ -46,6 +46,41 @@ def rel(from_dir, to_dir):
     return (up + to_dir) or "./"
 
 
+def auto_lang_script(code, out_dir):
+    """
+    Só na página principal (raiz): antes de a página aparecer, abre o idioma
+    do celular/navegador do visitante, se for um dos que temos.
+    Não redireciona: robôs (Google, prévias de link), quem já escolheu um idioma
+    e links com ?lang=xx (que também gravam essa escolha).
+    Idioma que não temos (ex.: alemão) → X_DEFAULT (inglês).
+    """
+    if out_dir != "":
+        return ""
+    targets = {c: rel("", d) for c, d in LANGS.items()}
+    return f"""  <script>
+  /* Idioma automático — gerado por tools/build.py */
+  (function () {{
+    var page = "{code}", targets = {json.dumps(targets)};
+    try {{
+      var q = new URLSearchParams(location.search).get("lang");
+      if (q && targets[q]) {{ localStorage.setItem("femik-lang", q); if (q === page) return; }}
+      if (/bot|crawl|spider|slurp|facebookexternalhit|whatsapp|telegram|preview|lighthouse|headless/i.test(navigator.userAgent)) return;
+      var want = q || localStorage.getItem("femik-lang");
+      if (!want) {{
+        var prefs = navigator.languages || [navigator.language || ""];
+        for (var i = 0; i < prefs.length && !want; i++) {{
+          var l = String(prefs[i]).slice(0, 2).toLowerCase();
+          if (targets[l]) want = l;
+        }}
+        if (!want) want = "{X_DEFAULT}"; // idioma que não temos → inglês
+      }}
+      if (want && want !== page && targets[want]) location.replace(targets[want] + location.hash);
+    }} catch (e) {{}}
+  }})();
+  </script>
+"""
+
+
 def main():
     template = (ROOT / "src/index.template.html").read_text(encoding="utf-8")
     texts = {c: json.loads((ROOT / f"i18n/{c}.json").read_text(encoding="utf-8")) for c in LANGS}
@@ -69,7 +104,7 @@ def main():
         )
         lang_switch = f'''    <div class="lang">
       <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="{escape(t["nav.langAria"])}">
-        {GLOBE}<span>{t["meta.langShort"]}</span>{CHEVRON}
+        {GLOBE}<span>{t["meta.langName"]}</span>{CHEVRON}
       </button>
       <ul class="lang-menu">
 {items}
@@ -91,6 +126,7 @@ def main():
         }
 
         special = {
+            "@autoLang": auto_lang_script(code, out_dir),
             "@root": root,
             "@pageUrl": SITE + out_dir,
             "@hreflang": hreflang,

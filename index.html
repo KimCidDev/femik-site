@@ -3,6 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+  /* Idioma automático — gerado por tools/build.py */
+  (function () {
+    var page = "pt", targets = {"pt": "./", "en": "en/", "es": "es/"};
+    try {
+      var q = new URLSearchParams(location.search).get("lang");
+      if (q && targets[q]) { localStorage.setItem("femik-lang", q); if (q === page) return; }
+      if (/bot|crawl|spider|slurp|facebookexternalhit|whatsapp|telegram|preview|lighthouse|headless/i.test(navigator.userAgent)) return;
+      var want = q || localStorage.getItem("femik-lang");
+      if (!want) {
+        var prefs = navigator.languages || [navigator.language || ""];
+        for (var i = 0; i < prefs.length && !want; i++) {
+          var l = String(prefs[i]).slice(0, 2).toLowerCase();
+          if (targets[l]) want = l;
+        }
+        if (!want) want = "en"; // idioma que não temos → inglês
+      }
+      if (want && want !== page && targets[want]) location.replace(targets[want] + location.hash);
+    } catch (e) {}
+  })();
+  </script>
   <title>Femik — Presença, automação e dados para empresas em crescimento</title>
   <meta name="description" content="Site que vende, processos que rodam sozinhos e dados que orientam decisões. A Femik é o time digital de empresas em crescimento." />
   <meta name="theme-color" content="#07060f" />
@@ -56,7 +77,7 @@
     </nav>
     <div class="lang">
       <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Escolher idioma">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z"/></svg><span>PT</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z"/></svg><span>Português</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
       </button>
       <ul class="lang-menu">
         <li><a href="./" hreflang="pt-BR" lang="pt-BR" data-lang="pt" aria-current="true"><b>PT</b> Português</a></li>

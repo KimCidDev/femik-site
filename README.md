@@ -22,8 +22,14 @@ O site existe em **português, inglês e espanhol**, cada um numa página estát
 (`/`, `/en/`, `/es/`). Assim o Google indexa cada idioma e a prévia do link no WhatsApp
 aparece no idioma do link compartilhado.
 
-- Seletor de idioma no cabeçalho (ícone de globo), visível também no celular.
-- Quem chega com o navegador noutro idioma disponível vê uma sugestão discreta para trocar.
+- **Idioma automático:** quem abre o endereço principal vê direto a versão no idioma do
+  celular/navegador (português, inglês ou espanhol; outros idiomas → inglês). Isso acontece
+  antes de a página aparecer. Não redireciona robôs (Google, prévias de link), quem já escolheu
+  um idioma, nem links com `?lang=pt|en|es`, que também fixam a escolha.
+- Links diretos `/en/` e `/es/` são sempre respeitados; se o celular falar outro idioma,
+  aparece só uma sugestão discreta para trocar.
+- Seletor no cabeçalho com globo + nome do idioma ("English", "Español", "Português"),
+  visível também no celular. Sem bandeiras: bandeira indica país, não idioma.
 - Formulário e mensagens do WhatsApp saem no idioma da página.
 - Para idiomas que não temos, o navegador do visitante oferece tradução automática.
 
@@ -32,6 +38,10 @@ porque eles são gerados.
 1. Textos: `i18n/pt.json`, `i18n/en.json`, `i18n/es.json`
 2. Estrutura da página: `src/index.template.html`
 3. Gere as páginas: `python tools/build.py` (Python 3, sem instalar nada)
+
+**QR codes** (`marca/qr/`): `femik-qr-automatico` abre no idioma do celular de quem escaneia;
+os outros fixam português, inglês ou espanhol. Para gerar de novo (ex.: após mudar o domínio):
+`python tools/make_qr.py` (requer OpenCV). O script confere a leitura de cada QR.
 
 **Novo idioma:** copie `i18n/en.json` para `i18n/<código>.json`, traduza e acrescente o
 código em `LANGS` no topo de `tools/build.py`.
@@ -63,12 +73,13 @@ index.html        página em português (gerada)
 en/ · es/         páginas em inglês e espanhol (geradas)
 src/              modelo da página
 i18n/             textos de cada idioma
-tools/build.py    gera as páginas e o sitemap.xml
+tools/build.py    gera as páginas, o idioma automático e o sitemap.xml
+tools/make_qr.py  gera e confere os QR codes
 css/style.css
 js/main.js        interações (loader, carrossel, menu, WhatsApp)
 js/logo3d.js      logo 3D (Three.js via CDN jsDelivr)
 assets/logo/      logos usados pelo site + imagem de compartilhamento
-marca/            kit de marca: SVG (texto em contorno) e PNG em alta (4096/8192 px)
+marca/            kit de marca (e marca/qr/ com os QR codes): SVG (texto em contorno) e PNG em alta (4096/8192 px)
 ```
 
 ## Identidade
