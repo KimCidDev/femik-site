@@ -45,8 +45,8 @@
     "b3": "Integração com WhatsApp"
   },
   "s2": {
-    "tag": "02 · Portais",
-    "title": "Portais e sistemas web",
+    "tag": "02 · Sistemas web",
+    "title": "Sistemas web sob medida",
     "text": "Área do cliente, catálogo, agendamentos, painéis internos: ferramentas web sob medida para a rotina da sua empresa.",
     "b1": "Acesso por login",
     "b2": "Painéis administrativos",
@@ -95,7 +95,7 @@
     "n3": "Automação",
     "n4": "Dados",
     "d1": "entendemos o negócio, o público e onde está o gargalo.",
-    "d2": "site, portal e redes com posicionamento claro.",
+    "d2": "site e redes sociais com posicionamento claro.",
     "d3": "conectamos ferramentas e eliminamos tarefas repetidas.",
     "d4": "medimos, aprendemos e voltamos ao início com mais precisão.",
     "line1": "MÉTODO",
@@ -118,7 +118,7 @@
   },
   "contact": {
     "eyebrow": "Conecte-se conosco",
-    "title": "Vamos posicionar sua empresa <span class=\"grad\">no digital de hoje</span>.",
+    "title": "Seu próximo passo digital <span class=\"grad\">começa com uma conversa</span>.",
     "text": "Conte em poucas linhas o que você precisa. Respondemos pelo WhatsApp com um diagnóstico inicial gratuito.",
     "openChat": "Abrir conversa",
     "emailLabel": "E-mail"
@@ -130,7 +130,7 @@
     "companyPh": "Nome da empresa",
     "need": "O que você precisa?",
     "o1": "Site ou landing page",
-    "o2": "Portal ou sistema web",
+    "o2": "Sistema web ou área do cliente",
     "o3": "Automação de processos",
     "o4": "Análise de dados / dashboards",
     "o5": "Mídias digitais",

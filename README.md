@@ -1,7 +1,7 @@
 # Femik — site institucional
 
 Site da **Femik**, estúdio digital para empresas em crescimento:
-presença (sites e portais), automação de processos, análise de dados e mídias digitais —
+presença (sites e sistemas web), automação de processos, análise de dados e mídias digitais —
 tudo integrado num único método.
 
 - **Link público (GitHub Pages):**

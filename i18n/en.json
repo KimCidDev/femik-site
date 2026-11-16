@@ -46,7 +46,7 @@
   },
   "s2": {
     "tag": "02 · Web apps",
-    "title": "Client portals and web apps",
+    "title": "Custom web apps",
     "text": "Client areas, catalogs, booking, internal dashboards: custom web tools built around how your business actually runs.",
     "b1": "Secure login access",
     "b2": "Admin panels",
@@ -95,7 +95,7 @@
     "n3": "Automation",
     "n4": "Data",
     "d1": "we learn your business, your audience and where the bottleneck is.",
-    "d2": "website, portal and social media with clear positioning.",
+    "d2": "website and social media with clear positioning.",
     "d3": "we connect your tools and eliminate repetitive tasks.",
     "d4": "we measure, learn and start the cycle again with more precision.",
     "line1": "THE FEMIK",
@@ -118,7 +118,7 @@
   },
   "contact": {
     "eyebrow": "Get in touch",
-    "title": "Let's position your business <span class=\"grad\">for today's digital world</span>.",
+    "title": "Your next digital step <span class=\"grad\">starts with a conversation</span>.",
     "text": "Tell us in a few lines what you need. We'll reply on WhatsApp with a free initial assessment.",
     "openChat": "Start a chat",
     "emailLabel": "Email"
@@ -130,7 +130,7 @@
     "companyPh": "Company name",
     "need": "What do you need?",
     "o1": "Website or landing page",
-    "o2": "Client portal or web app",
+    "o2": "Web app or client area",
     "o3": "Process automation",
     "o4": "Data analysis / dashboards",
     "o5": "Digital media",
