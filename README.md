@@ -34,7 +34,7 @@ aparece no idioma do link compartilhado.
 - Formulário e mensagens do WhatsApp saem no idioma da página.
 - Para idiomas que não temos, o navegador do visitante oferece tradução automática.
 
-**Como editar textos:** não edite `index.html`, `en/index.html` nem `es/index.html` à mão,
+**Como editar textos:** não edite `index.html`, `pt/index.html` nem `es/index.html` à mão,
 porque eles são gerados.
 1. Textos: `i18n/pt.json`, `i18n/en.json`, `i18n/es.json`
 2. Estrutura da página: `src/index.template.html`
