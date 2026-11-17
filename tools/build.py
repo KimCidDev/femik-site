@@ -4,7 +4,8 @@ Gera o site da Femik em vários idiomas a partir de um único modelo.
 
   Modelo:  src/index.template.html   (estrutura da página, com {{chaves}})
   Textos:  i18n/<idioma>.json         (um arquivo por idioma)
-  Saída:   index.html (pt), en/index.html, es/index.html, sitemap.xml
+  Saída:   index.html (inglês, padrão), pt/index.html, es/index.html,
+           en/index.html (só redireciona links antigos), sitemap.xml
 
 Uso:  python tools/build.py
 Só usa a biblioteca padrão do Python — nada para instalar.
@@ -21,7 +22,8 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://kimciddev.github.io/femik-site/"
 
 # código -> pasta de saída ("" = raiz). A ordem é a do menu de idiomas.
-LANGS = {"pt": "", "en": "en/", "es": "es/"}
+# O inglês fica na raiz: é o que aparece por regra, inclusive se algo falhar.
+LANGS = {"en": "", "pt": "pt/", "es": "es/"}
 X_DEFAULT = "en"  # versão mostrada a quem fala um idioma que não temos
 
 GLOBE = ('<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/>'
@@ -52,7 +54,7 @@ def auto_lang_script(code, out_dir):
     do celular/navegador do visitante, se for um dos que temos.
     Não redireciona: robôs (Google, prévias de link), quem já escolheu um idioma
     e links com ?lang=xx (que também gravam essa escolha).
-    Idioma que não temos (ex.: alemão) → X_DEFAULT (inglês).
+    Idioma que não temos (ex.: hindi, chinês, alemão) → fica no inglês da raiz.
     """
     if out_dir != "":
         return ""
@@ -153,6 +155,24 @@ def main():
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(html, encoding="utf-8")
         print(f"ok  {dest.relative_to(ROOT)}")
+
+    # links antigos /en/ (do tempo em que o português era a raiz) → raiz em inglês
+    stub = ROOT / "en/index.html"
+    stub.parent.mkdir(exist_ok=True)
+    stub.write_text(f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="{SITE}" />
+  <meta http-equiv="refresh" content="0; url=../?lang=en" />
+  <script>location.replace("../?lang=en" + location.hash);</script>
+  <title>Femik</title>
+</head>
+<body><a href="../?lang=en">Femik — English</a></body>
+</html>
+""", encoding="utf-8")
+    print("ok  en/index.html (redirecionamento de links antigos)")
 
     # sitemap com as versões de idioma
     urls = []

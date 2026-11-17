@@ -5,8 +5,8 @@ presença (sites e sistemas web), automação de processos, análise de dados e 
 tudo integrado num único método.
 
 - **Link público (GitHub Pages):**
-  - Português: https://kimciddev.github.io/femik-site/
-  - English: https://kimciddev.github.io/femik-site/en/
+  - English (padrão): https://kimciddev.github.io/femik-site/
+  - Português: https://kimciddev.github.io/femik-site/pt/
   - Español: https://kimciddev.github.io/femik-site/es/
 - **Estado:** protótipo (v0.1) — publicado no GitHub Pages, em validação
 
@@ -19,15 +19,16 @@ tudo integrado num único método.
 
 ## Idiomas
 O site existe em **português, inglês e espanhol**, cada um numa página estática própria
-(`/`, `/en/`, `/es/`). Assim o Google indexa cada idioma e a prévia do link no WhatsApp
+(`/` em inglês, `/pt/`, `/es/`). Assim o Google indexa cada idioma e a prévia do link no WhatsApp
 aparece no idioma do link compartilhado.
 
-- **Idioma automático:** quem abre o endereço principal vê direto a versão no idioma do
-  celular/navegador (português, inglês ou espanhol; outros idiomas → inglês). Isso acontece
-  antes de a página aparecer. Não redireciona robôs (Google, prévias de link), quem já escolheu
-  um idioma, nem links com `?lang=pt|en|es`, que também fixam a escolha.
-- Links diretos `/en/` e `/es/` são sempre respeitados; se o celular falar outro idioma,
-  aparece só uma sugestão discreta para trocar.
+- **Inglês por regra:** o endereço principal é a versão em inglês. Se algo falhar
+  (JavaScript bloqueado, navegador dentro de um app), o visitante vê inglês.
+- **Idioma automático:** se o celular/navegador estiver em português ou espanhol, a página
+  principal abre direto `/pt/` ou `/es/`, antes de aparecer. Qualquer outro idioma
+  (hindi, chinês, alemão…) fica no inglês. Não redireciona robôs (Google, prévias de link),
+  quem já escolheu um idioma, nem links com `?lang=en|pt|es`, que também fixam a escolha.
+- Links diretos `/pt/` e `/es/` são sempre respeitados. Links antigos `/en/` levam à raiz.
 - Seletor no cabeçalho com globo + nome do idioma ("English", "Español", "Português"),
   visível também no celular. Sem bandeiras: bandeira indica país, não idioma.
 - Formulário e mensagens do WhatsApp saem no idioma da página.
@@ -69,8 +70,9 @@ que precisa de servidor por usar módulos JavaScript.)
 
 ## Estrutura
 ```
-index.html        página em português (gerada)
-en/ · es/         páginas em inglês e espanhol (geradas)
+index.html        página em inglês, padrão (gerada)
+pt/ · es/         páginas em português e espanhol (geradas)
+en/               só redireciona links antigos para a raiz
 src/              modelo da página
 i18n/             textos de cada idioma
 tools/build.py    gera as páginas, o idioma automático e o sitemap.xml

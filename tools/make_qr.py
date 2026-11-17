@@ -8,8 +8,8 @@ OUT = ROOT / "marca/qr"
 SITE = "https://kimciddev.github.io/femik-site/"
 QRS = {
     "femik-qr-automatico": (SITE, "femik.", "Abre no idioma do celular · Opens in your phone's language"),
-    "femik-qr-portugues": (SITE + "?lang=pt", "Português", "Site em português"),
-    "femik-qr-english": (SITE + "en/", "English", "Website in English"),
+    "femik-qr-portugues": (SITE + "pt/", "Português", "Site em português"),
+    "femik-qr-english": (SITE + "?lang=en", "English", "Website in English"),
     "femik-qr-espanol": (SITE + "es/", "Español", "Sitio en español"),
 }
 SYMBOL = (ROOT / "assets/logo/femik-simbolo.svg").read_text()
