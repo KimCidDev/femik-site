@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kimciddev.github.io/femik-site/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kimciddev.github.io/femik-site/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://kimciddev.github.io/femik-site/pt/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://kimciddev.github.io/femik-site/es/"/>
+    <loc>https://femik.ca/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://femik.ca/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://femik.ca/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://femik.ca/es/"/>
   </url>
   <url>
-    <loc>https://kimciddev.github.io/femik-site/pt/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kimciddev.github.io/femik-site/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://kimciddev.github.io/femik-site/pt/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://kimciddev.github.io/femik-site/es/"/>
+    <loc>https://femik.ca/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://femik.ca/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://femik.ca/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://femik.ca/es/"/>
   </url>
   <url>
-    <loc>https://kimciddev.github.io/femik-site/es/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kimciddev.github.io/femik-site/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://kimciddev.github.io/femik-site/pt/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://kimciddev.github.io/femik-site/es/"/>
+    <loc>https://femik.ca/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://femik.ca/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://femik.ca/pt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://femik.ca/es/"/>
   </url>
 </urlset>

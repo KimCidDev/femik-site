@@ -5,10 +5,10 @@ presença (sites e sistemas web), automação de processos, análise de dados e 
 tudo integrado num único método.
 
 - **Link público (GitHub Pages):**
-  - English (padrão): https://kimciddev.github.io/femik-site/
-  - Português: https://kimciddev.github.io/femik-site/pt/
-  - Español: https://kimciddev.github.io/femik-site/es/
-- **Estado:** protótipo (v0.1) — publicado no GitHub Pages, em validação. E-mail de contato provisório: cid.kim@gmail.com
+  - English (padrão): https://femik.ca/
+  - Português: https://femik.ca/pt/
+  - Español: https://femik.ca/es/
+- **Estado:** protótipo (v0.1) — publicado no GitHub Pages, em validação. Domínio próprio femik.ca (GitHub Pages); e-mail Zoho Mail Lite (cid@femik.ca)
 
 ## Seções
 1. Loading rápido com o logo em 3D (Three.js; se o WebGL falhar, mostra o logo em SVG)

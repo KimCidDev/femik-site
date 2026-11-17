@@ -19,7 +19,7 @@ from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = "https://kimciddev.github.io/femik-site/"
+SITE = "https://femik.ca/"
 
 # código -> pasta de saída ("" = raiz). A ordem é a do menu de idiomas.
 # O inglês fica na raiz: é o que aparece por regra, inclusive se algo falhar.

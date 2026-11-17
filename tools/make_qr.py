@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "marca/qr"
-SITE = "https://kimciddev.github.io/femik-site/"
+SITE = "https://femik.ca/"
 QRS = {
     "femik-qr-automatico": (SITE, "femik.", "Abre no idioma do celular · Opens in your phone's language"),
     "femik-qr-portugues": (SITE + "pt/", "Português", "Site em português"),
@@ -17,6 +17,7 @@ SYMBOL_INNER = SYMBOL[SYMBOL.index("<defs>"):SYMBOL.rindex("</svg>")]
 
 def matrix(url):
     p = cv2.QRCodeEncoder_Params(); p.correction_level = cv2.QRCodeEncoder_CORRECT_LEVEL_H
+    p.version = 5  # tamanho fixo: com endereços curtos o logo cobriria módulos demais
     img = cv2.QRCodeEncoder.create(p).encode(url)       # 1 px por módulo, com margem
     return (img < 128)
 
