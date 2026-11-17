@@ -128,6 +128,7 @@ def main():
         }
 
         special = {
+            "@site": SITE,
             "@autoLang": auto_lang_script(code, out_dir),
             "@root": root,
             "@pageUrl": SITE + out_dir,
