@@ -11,7 +11,7 @@
     "homeAria": "Femik — home",
     "services": "Services",
     "about": "About us",
-    "testimonials": "Testimonials",
+    "testimonials": "In practice",
     "cta": "Get in touch",
     "menuAria": "Open menu",
     "langAria": "Choose language"
@@ -102,18 +102,16 @@
     "line2": "METHOD"
   },
   "testi": {
-    "eyebrow": "Testimonials",
-    "title": "Businesses that left improvisation behind.",
-    "note": "Prototype version: the testimonials below are examples and will be replaced with real client feedback.",
-    "badge": "Example",
-    "q1": "We used to put quotes together on the fly. Now the website form generates the proposal and alerts the team on WhatsApp.",
-    "c1": "Aesthetics clinic",
+    "eyebrow": "In practice",
+    "title": "What changes when everything is connected.",
+    "q1": "The website form builds the quote instantly and alerts the team on WhatsApp. No request goes unanswered.",
+    "c1": "For aesthetics clinics",
     "c1s": "Customer service and automation",
-    "q2": "The sales dashboard changed our meetings. Instead of debating opinions, we look at the numbers and decide.",
-    "c2": "Regional distributor",
+    "q2": "Sales, inventory and targets in one dashboard. Meetings start with the numbers, not opinions.",
+    "c2": "For distributors",
     "c2s": "Data analysis",
-    "q3": "New website, aligned social media and, for the first time, we know where every client comes from.",
-    "c3": "Professional services firm",
+    "q3": "A new website, aligned social media and every client's source tracked, from first visit to signed contract.",
+    "c3": "For professional services firms",
     "c3s": "Website and digital media"
   },
   "contact": {

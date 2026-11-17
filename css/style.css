@@ -215,7 +215,7 @@ section { position: relative; padding: 110px 0; }
 .note { color: var(--muted); font-size: 0.85rem; }
 .t-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .t-card {
-  position: relative; margin: 0; padding: 50px 28px 28px; border-radius: var(--radius);
+  position: relative; margin: 0; padding: 32px 28px 28px; border-radius: var(--radius);
   background: var(--surface); border: 1px solid var(--line); display: flex; flex-direction: column; justify-content: space-between;
   transition: transform 0.3s, border-color 0.3s;
 }

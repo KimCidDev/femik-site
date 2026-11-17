@@ -47,7 +47,7 @@
     <nav class="nav-links" id="menu">
       <a href="#services">{{nav.services}}</a>
       <a href="#about">{{nav.about}}</a>
-      <a href="#testimonials">{{nav.testimonials}}</a>
+      <a href="#in-practice">{{nav.testimonials}}</a>
       <a href="#contact" class="btn btn-sm">{{nav.cta}}</a>
     </nav>
 {{@langSwitch}}
@@ -197,29 +197,25 @@
     </section>
 
     <!-- ============ DEPOIMENTOS ============ -->
-    <section class="testimonials" id="testimonials">
+    <section class="testimonials" id="in-practice">
       <div class="wrap">
         <div class="section-head reveal">
           <p class="eyebrow">{{testi.eyebrow}}</p>
           <h2>{{testi.title}}</h2>
-          <p class="note">{{testi.note}}</p>
         </div>
         <div class="t-grid">
-          <blockquote class="t-card reveal">
-            <span class="t-badge">{{testi.badge}}</span>
-            <p>“{{testi.q1}}”</p>
-            <footer><span class="avatar a1">CL</span><div><b>{{testi.c1}}</b><small>{{testi.c1s}}</small></div></footer>
-          </blockquote>
-          <blockquote class="t-card reveal">
-            <span class="t-badge">{{testi.badge}}</span>
-            <p>“{{testi.q2}}”</p>
-            <footer><span class="avatar a2">DI</span><div><b>{{testi.c2}}</b><small>{{testi.c2s}}</small></div></footer>
-          </blockquote>
-          <blockquote class="t-card reveal">
-            <span class="t-badge">{{testi.badge}}</span>
-            <p>“{{testi.q3}}”</p>
-            <footer><span class="avatar a3">ES</span><div><b>{{testi.c3}}</b><small>{{testi.c3s}}</small></div></footer>
-          </blockquote>
+          <article class="t-card reveal">
+            <p>{{testi.q1}}</p>
+            <footer><span class="avatar a1">01</span><div><b>{{testi.c1}}</b><small>{{testi.c1s}}</small></div></footer>
+          </article>
+          <article class="t-card reveal">
+            <p>{{testi.q2}}</p>
+            <footer><span class="avatar a2">02</span><div><b>{{testi.c2}}</b><small>{{testi.c2s}}</small></div></footer>
+          </article>
+          <article class="t-card reveal">
+            <p>{{testi.q3}}</p>
+            <footer><span class="avatar a3">03</span><div><b>{{testi.c3}}</b><small>{{testi.c3s}}</small></div></footer>
+          </article>
         </div>
       </div>
     </section>
@@ -233,7 +229,7 @@
           <p>{{contact.text}}</p>
           <ul class="contact-list">
             <li><span>WhatsApp</span><a href="#" class="js-whats">{{contact.openChat}}</a></li>
-            <li><span>{{contact.emailLabel}}</span><a href="mailto:contato@femik.com.br" class="js-email">contato@femik.com.br</a></li>
+            <li><span>{{contact.emailLabel}}</span><a href="mailto:cid.kim@gmail.com" class="js-email">cid.kim@gmail.com</a></li>
           </ul>
         </div>
         <form class="contact-form reveal" id="contact-form">

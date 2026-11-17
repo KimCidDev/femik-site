@@ -11,7 +11,7 @@
     "homeAria": "Femik — inicio",
     "services": "Servicios",
     "about": "Quiénes somos",
-    "testimonials": "Testimonios",
+    "testimonials": "En la práctica",
     "cta": "Contáctanos",
     "menuAria": "Abrir menú",
     "langAria": "Elegir idioma"
@@ -102,18 +102,16 @@
     "line2": "FEMIK"
   },
   "testi": {
-    "eyebrow": "Testimonios",
-    "title": "Empresas que dejaron atrás la improvisación.",
-    "note": "Versión prototipo: los testimonios a continuación son ejemplos y serán reemplazados por relatos reales de clientes.",
-    "badge": "Ejemplo",
-    "q1": "Antes respondíamos los presupuestos improvisando. Hoy el formulario del sitio genera la propuesta y avisa al equipo por WhatsApp.",
-    "c1": "Clínica estética",
+    "eyebrow": "En la práctica",
+    "title": "Lo que cambia cuando todo está conectado.",
+    "q1": "El formulario del sitio genera el presupuesto al instante y avisa al equipo por WhatsApp. Ninguna solicitud queda sin respuesta.",
+    "c1": "Para clínicas estéticas",
     "c1s": "Atención y automatización",
-    "q2": "El panel de ventas cambió nuestras reuniones. En lugar de discutir opiniones, miramos el número y decidimos.",
-    "c2": "Distribuidora regional",
+    "q2": "Ventas, inventario y metas en un solo panel. Las reuniones empiezan por los números, no por opiniones.",
+    "c2": "Para distribuidoras",
     "c2s": "Análisis de datos",
-    "q3": "Sitio nuevo, redes alineadas y, por primera vez, sabemos de dónde viene cada cliente.",
-    "c3": "Despacho de servicios",
+    "q3": "Sitio nuevo, redes alineadas y el origen de cada cliente rastreado, de la primera visita al contrato firmado.",
+    "c3": "Para despachos de servicios",
     "c3s": "Sitio web y medios digitales"
   },
   "contact": {

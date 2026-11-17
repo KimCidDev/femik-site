@@ -8,7 +8,7 @@ tudo integrado num único método.
   - English (padrão): https://kimciddev.github.io/femik-site/
   - Português: https://kimciddev.github.io/femik-site/pt/
   - Español: https://kimciddev.github.io/femik-site/es/
-- **Estado:** protótipo (v0.1) — publicado no GitHub Pages, em validação
+- **Estado:** protótipo (v0.1) — publicado no GitHub Pages, em validação. E-mail de contato provisório: cid.kim@gmail.com
 
 ## Seções
 1. Loading rápido com o logo em 3D (Three.js; se o WebGL falhar, mostra o logo em SVG)
