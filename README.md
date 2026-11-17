@@ -8,7 +8,7 @@ tudo integrado num único método.
   - English (padrão): https://femik.ca/
   - Português: https://femik.ca/pt/
   - Español: https://femik.ca/es/
-- **Estado:** protótipo (v0.1) — publicado no GitHub Pages, em validação. Domínio próprio femik.ca (GitHub Pages); e-mail Zoho Mail Lite (cid@femik.ca)
+- **Estado:** protótipo (v0.1) — publicado no GitHub Pages, em validação. Domínio próprio femik.ca (GitHub Pages); e-mail Zoho Mail Lite (kim@femik.ca)
 
 ## Seções
 1. Loading rápido com o logo em 3D (Three.js; se o WebGL falhar, mostra o logo em SVG)
