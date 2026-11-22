@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Femik — gerador de código do briefing (interno)</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/logo/femik-simbolo.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../form.css" />
+  <style>
+    .gen { max-width: 640px; margin: 4vh auto 0; }
+    .codebox { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 18px 0; padding: 18px 20px; border-radius: 18px; background: var(--bg); border: 2px dashed rgba(168,85,247,.5); }
+    .codebox strong { font: 800 1.7rem/1 var(--fh); letter-spacing: .12em; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 14px 0; }
+    .row label span { display: block; font-weight: 700; font-size: .85rem; margin-bottom: 6px; }
+    pre { white-space: pre-wrap; font: 500 .95rem/1.55 var(--fb); background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin: 10px 0; }
+    .tabs { display: flex; gap: 6px; margin-top: 18px; }
+    .tabs button { border: 1px solid var(--line); background: rgba(255,255,255,.04); color: var(--muted); font: 700 .8rem var(--fh); padding: 8px 12px; border-radius: 99px; cursor: pointer; }
+    .tabs button[aria-pressed="true"] { background: var(--grad); color: #fff; border-color: transparent; }
+    .ok { color: #86efac; font-weight: 700; } .no { color: var(--err); font-weight: 700; }
+    @media (max-width: 620px) { .row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="head">
+    <a href="../../" class="brand"><img src="../../assets/logo/femik-logo-horizontal.svg" alt="Femik" height="30" /></a>
+    <span class="brief">Uso interno · R2</span>
+  </header>
+  <main>
+    <section class="card gen">
+      <h2>🔑 Código de acesso do briefing</h2>
+      <p class="muted">Gere um código para cada lead no contato R2 e envie junto com o link <b>femik.ca/form</b>. Anote o código no CRM: ele vem no e-mail de resposta e identifica o lead.</p>
+
+      <div class="codebox"><strong id="code">—</strong><button class="btn" id="gen">Gerar novo</button></div>
+
+      <div class="row">
+        <label><span>Nome do cliente</span><input type="text" id="client" placeholder="Ex.: Ana" /></label>
+        <label><span>Quem envia</span>
+          <select id="sender"><option>Kim</option><option>Isabel</option><option>Felipe</option></select></label>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button data-l="pt" aria-pressed="true">PT</button><button data-l="en" aria-pressed="false">EN</button><button data-l="es" aria-pressed="false">ES</button>
+      </div>
+      <p class="muted small" style="margin:10px 0 0">Texto pronto para o e-mail:</p>
+      <pre id="mail"></pre>
+      <button class="btn ghost" id="copy">📋 Copiar e-mail</button>
+
+      <hr style="border:0;border-top:1px solid var(--line);margin:28px 0" />
+      <h2 style="font-size:1.1rem">Conferir um código</h2>
+      <div class="row"><input type="text" id="check" placeholder="FMK-XXXX-XX" /><p id="checkOut" class="muted" style="margin:12px 0 0">—</p></div>
+    </section>
+  </main>
+  <script src="../code.js"></script>
+  <script>
+    const T = {
+      pt: (n, c, s) => `Olá${n ? ", " + n : ""}!\n\nObrigado pela conversa de hoje. Como combinamos, aqui está o acesso ao nosso briefing online. Ele substitui a reunião de diagnóstico, leva de 10 a 20 minutos e pode ser pausado e retomado no mesmo aparelho.\n\n👉 femik.ca/form\n🔑 Código de acesso: ${c}\n\nCom as suas respostas, preparamos uma proposta sob medida e entramos em contato para apresentá-la.\n\nQualquer dúvida, é só responder este e-mail.\n\nAbraço,\n${s} — Femik`,
+      en: (n, c, s) => `Hi${n ? " " + n : ""},\n\nThanks for the chat today. As promised, here's access to our online brief. It replaces the discovery meeting, takes 10 to 20 minutes, and you can pause and pick up where you left off on the same device.\n\n👉 femik.ca/form\n🔑 Access code: ${c}\n\nWith your answers, we'll put together a tailored proposal and get in touch to walk you through it.\n\nAny questions, just reply to this email.\n\nBest,\n${s} — Femik`,
+      es: (n, c, s) => `¡Hola${n ? ", " + n : ""}!\n\nGracias por la conversación de hoy. Como acordamos, aquí tienes el acceso a nuestro briefing online. Reemplaza la reunión de diagnóstico, toma de 10 a 20 minutos y puedes pausarlo y retomarlo en el mismo dispositivo.\n\n👉 femik.ca/form\n🔑 Código de acceso: ${c}\n\nCon tus respuestas preparamos una propuesta a medida y te contactamos para presentarla.\n\nCualquier duda, responde a este email.\n\nUn abrazo,\n${s} — Femik`,
+    };
+    let lang = "pt", code = FemikCode.generate();
+    const $ = (id) => document.getElementById(id);
+    const paint = () => { $("code").textContent = code; $("mail").textContent = T[lang]($("client").value.trim(), code, $("sender").value); };
+    $("gen").onclick = () => { code = FemikCode.generate(); paint(); };
+    $("client").oninput = paint; $("sender").onchange = paint;
+    document.querySelectorAll(".tabs button").forEach((b) => b.onclick = () => {
+      lang = b.dataset.l; document.querySelectorAll(".tabs button").forEach((x) => x.setAttribute("aria-pressed", x === b)); paint();
+    });
+    $("copy").onclick = async () => {
+      try { await navigator.clipboard.writeText($("mail").textContent); $("copy").textContent = "✓ Copiado"; }
+      catch (_) { $("copy").textContent = "Selecione e copie manualmente"; }
+      setTimeout(() => ($("copy").textContent = "📋 Copiar e-mail"), 1800);
+    };
+    $("check").oninput = () => {
+      const v = $("check").value; $("check").value = FemikCode.format(v);
+      $("checkOut").innerHTML = !v ? "—" : FemikCode.isValid(v) ? '<span class="ok">✓ Código válido</span>' : '<span class="no">✗ Código inválido</span>';
+    };
+    paint();
+  </script>
+</body>
+</html>

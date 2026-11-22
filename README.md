@@ -47,6 +47,20 @@ os outros fixam português, inglês ou espanhol. Para gerar de novo (ex.: após 
 **Novo idioma:** copie `i18n/en.json` para `i18n/<código>.json`, traduza e acrescente o
 código em `LANGS` no topo de `tools/build.py`.
 
+## Briefing do cliente (femik.ca/form)
+Formulário interativo que substitui a reunião de diagnóstico (R3). Não aparece no Google (`noindex` + `robots.txt`).
+
+- **Acesso:** o cliente digita um código `FMK-XXXX-XX`, enviado por e-mail no contato R2.
+  Gere códigos e o texto do e-mail em **femik.ca/form/codigo/** (uso interno). Anote o código no CRM: ele identifica o lead na resposta.
+- **Envio:** as respostas chegam por e-mail em kim@femik.ca (cópia para isabel@ e felipe@), sempre em português,
+  com uma **avaliação automática**: temperatura do lead, serviços sugeridos, maturidade digital, clareza de marca,
+  urgência, capacidade de investimento, insatisfação e pontos de atenção. Inclui os dados brutos em JSON para o CRM.
+  Serviço de envio: FormSubmit (gratuito). **No primeiro envio, chega um e-mail de ativação em kim@femik.ca — clique em "Activate".**
+- **Idiomas:** PT, EN e ES (inglês por padrão, ou o idioma do celular).
+- **Editar perguntas:** `form/questions.js`. Pesos da avaliação: função `evaluate()` em `form/form.js`.
+- **Limite conhecido:** a checagem do código é feita no navegador — impede acesso casual, mas não é uma senha forte.
+  Códigos únicos com validade virão com o CRM (Supabase).
+
 ## Como abrir
 Site estático, sem build. Para testar localmente:
 
@@ -81,6 +95,7 @@ css/style.css
 js/main.js        interações (loader, carrossel, menu, WhatsApp)
 js/logo3d.js      logo 3D (Three.js via CDN jsDelivr)
 assets/logo/      logos usados pelo site + imagem de compartilhamento
+form/             briefing do cliente (femik.ca/form) + gerador de códigos (form/codigo/)
 marca/            kit de marca (e marca/qr/ com os QR codes): SVG (texto em contorno) e PNG em alta (4096/8192 px)
 ```
 
