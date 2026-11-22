@@ -121,22 +121,6 @@
     "openChat": "Abrir conversa",
     "emailLabel": "E-mail"
   },
-  "form": {
-    "name": "Seu nome",
-    "namePh": "Como podemos te chamar?",
-    "company": "Empresa",
-    "companyPh": "Nome da empresa",
-    "need": "O que você precisa?",
-    "o1": "Site ou landing page",
-    "o2": "Sistema web ou área do cliente",
-    "o3": "Automação de processos",
-    "o4": "Análise de dados / dashboards",
-    "o5": "Mídias digitais",
-    "o6": "Ainda não sei — quero um diagnóstico",
-    "message": "Mensagem",
-    "messagePh": "Conte um pouco sobre o seu negócio",
-    "submit": "Enviar pelo WhatsApp"
-  },
   "footer": {
     "tagline": "Presença, automação e dados para empresas em crescimento.",
     "rights": "Todos os direitos reservados."
@@ -150,5 +134,17 @@
     "greeting": "Olá, Femik! Meu nome é {name}",
     "fromCompany": ", da empresa {company}",
     "interest": ".\nTenho interesse em: {service}."
+  },
+  "quiz": {
+    "badge": "Novo · sem reunião",
+    "title": "Raio-X digital da sua empresa",
+    "text": "Você conta sua história no seu ritmo, uma pergunta por vez. Nós voltamos com uma proposta sob medida — sem precisar marcar reunião.",
+    "p1": "⏱️ 10–20 min",
+    "p2": "📱 Feito para o celular",
+    "p3": "💾 Salva sozinho",
+    "cta": "Começar o Raio-X →",
+    "href": "form/?lang=pt",
+    "note": "Ainda não tem seu código de acesso?",
+    "noteLink": "Peça pelo WhatsApp"
   }
 }

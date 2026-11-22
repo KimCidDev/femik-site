@@ -43,7 +43,7 @@ document.querySelectorAll(".js-whats").forEach((a) => {
 });
 
 /* ---- Formulário → mensagem pronta no WhatsApp (no idioma da página) ---- */
-document.getElementById("contact-form").addEventListener("submit", (e) => {
+document.getElementById("contact-form")?.addEventListener("submit", (e) => {
   e.preventDefault();
   const f = new FormData(e.target);
   const m = I18N.msg;

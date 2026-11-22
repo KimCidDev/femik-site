@@ -121,22 +121,6 @@
     "openChat": "Abrir conversación",
     "emailLabel": "Correo"
   },
-  "form": {
-    "name": "Tu nombre",
-    "namePh": "¿Cómo te llamamos?",
-    "company": "Empresa",
-    "companyPh": "Nombre de la empresa",
-    "need": "¿Qué necesitas?",
-    "o1": "Sitio web o landing page",
-    "o2": "Sistema web o área de clientes",
-    "o3": "Automatización de procesos",
-    "o4": "Análisis de datos / dashboards",
-    "o5": "Medios digitales",
-    "o6": "Aún no lo sé — quiero un diagnóstico",
-    "message": "Mensaje",
-    "messagePh": "Cuéntanos un poco sobre tu negocio",
-    "submit": "Enviar por WhatsApp"
-  },
   "footer": {
     "tagline": "Presencia, automatización y datos para empresas en crecimiento.",
     "rights": "Todos los derechos reservados."
@@ -150,5 +134,17 @@
     "greeting": "¡Hola, Femik! Me llamo {name}",
     "fromCompany": ", de la empresa {company}",
     "interest": ".\nMe interesa: {service}."
+  },
+  "quiz": {
+    "badge": "Nuevo · sin reunión",
+    "title": "La radiografía digital de tu empresa",
+    "text": "Cuéntanos tu historia a tu ritmo, una pregunta a la vez. Volvemos con una propuesta a medida — sin agendar reuniones.",
+    "p1": "⏱️ 10–20 min",
+    "p2": "📱 Pensado para el celular",
+    "p3": "💾 Se guarda solo",
+    "cta": "Empezar la radiografía →",
+    "href": "form/?lang=es",
+    "note": "¿Aún no tienes tu código de acceso?",
+    "noteLink": "Pídelo por WhatsApp"
   }
 }

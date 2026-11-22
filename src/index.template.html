@@ -232,22 +232,17 @@
             <li><span>{{contact.emailLabel}}</span><a href="mailto:kim@femik.ca" class="js-email">kim@femik.ca</a></li>
           </ul>
         </div>
-        <form class="contact-form reveal" id="contact-form">
-          <label>{{form.name}}<input name="name" required autocomplete="name" placeholder="{{form.namePh}}" /></label>
-          <label>{{form.company}}<input name="company" autocomplete="organization" placeholder="{{form.companyPh}}" /></label>
-          <label>{{form.need}}
-            <select name="service">
-              <option>{{form.o1}}</option>
-              <option>{{form.o2}}</option>
-              <option>{{form.o3}}</option>
-              <option>{{form.o4}}</option>
-              <option>{{form.o5}}</option>
-              <option>{{form.o6}}</option>
-            </select>
-          </label>
-          <label>{{form.message}}<textarea name="message" rows="3" placeholder="{{form.messagePh}}"></textarea></label>
-          <button type="submit" class="btn btn-block">{{form.submit}}</button>
-        </form>
+        <div class="quiz-card reveal">
+          <span class="quiz-badge">{{quiz.badge}}</span>
+          <div class="quiz-icon" aria-hidden="true"><span>🩻</span></div>
+          <h3>{{quiz.title}}</h3>
+          <p>{{quiz.text}}</p>
+          <ul class="quiz-pills">
+            <li>{{quiz.p1}}</li><li>{{quiz.p2}}</li><li>{{quiz.p3}}</li>
+          </ul>
+          <a class="btn btn-block quiz-cta" href="{{@root}}{{quiz.href}}">{{quiz.cta}}</a>
+          <p class="quiz-note">{{quiz.note}} <a href="#" class="js-whats">{{quiz.noteLink}}</a></p>
+        </div>
       </div>
     </section>
   </main>

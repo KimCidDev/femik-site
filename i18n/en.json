@@ -121,22 +121,6 @@
     "openChat": "Start a chat",
     "emailLabel": "Email"
   },
-  "form": {
-    "name": "Your name",
-    "namePh": "What should we call you?",
-    "company": "Company",
-    "companyPh": "Company name",
-    "need": "What do you need?",
-    "o1": "Website or landing page",
-    "o2": "Web app or client area",
-    "o3": "Process automation",
-    "o4": "Data analysis / dashboards",
-    "o5": "Digital media",
-    "o6": "Not sure yet — I'd like an assessment",
-    "message": "Message",
-    "messagePh": "Tell us a little about your business",
-    "submit": "Send via WhatsApp"
-  },
   "footer": {
     "tagline": "Web presence, automation and data for growing businesses.",
     "rights": "All rights reserved."
@@ -150,5 +134,17 @@
     "greeting": "Hi Femik! My name is {name}",
     "fromCompany": ", from {company}",
     "interest": ".\nI'm interested in: {service}."
+  },
+  "quiz": {
+    "badge": "New · no meeting needed",
+    "title": "Your company's digital X-ray",
+    "text": "Tell us your story at your own pace, one question at a time. We come back with a tailored proposal — no meeting to schedule.",
+    "p1": "⏱️ 10–20 min",
+    "p2": "📱 Made for mobile",
+    "p3": "💾 Saves as you go",
+    "cta": "Start the X-ray →",
+    "href": "form/?lang=en",
+    "note": "Don't have your access code yet?",
+    "noteLink": "Ask us on WhatsApp"
   }
 }
