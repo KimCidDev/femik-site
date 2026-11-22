@@ -471,7 +471,7 @@ async function submit() {
     go("done");
   } catch (e) {
     console.warn("Envio falhou:", e);
-    err.textContent = u.sendError;
+    err.innerHTML = esc(u.sendError) + (e && e.message ? `<br><small class="muted">(${esc(String(e.message).slice(0, 200))})</small>` : "");
     btn.disabled = false; btn.textContent = u.retry;
     const body = encodeURIComponent(report.text.slice(0, 1800));
     const subj = encodeURIComponent(report.fields._subject);
